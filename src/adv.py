@@ -1,4 +1,6 @@
 from room import Room
+from player import Player
+
 
 # Declare all the rooms
 
@@ -36,8 +38,12 @@ room['treasure'].s_to = room['narrow']
 #
 # Main
 #
+#Welcome note to new player
+print("Welcome to the Adventure Game\n")
+print("\nInstruction:\n Use keys n, s, e and w to move player in the North, South , East & West directions")
 
 # Make a new player object that is currently in the 'outside' room.
+player = Player("Player 1", room["outside"]) 
 
 # Write a loop that:
 #
@@ -49,3 +55,5 @@ room['treasure'].s_to = room['narrow']
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+
+
