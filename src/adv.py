@@ -74,3 +74,6 @@ while True:
   elif user_input == 'q':
     print("Thanks for playing. Bye")
 
+  else:
+    print("Invalid input, there's no room there. \nEnter again")
+    break
