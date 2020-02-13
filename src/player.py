@@ -5,13 +5,18 @@ from room import Room
 from item import Item
 
 class Player:
-  def __init__(self, name, current_room, item):
+  def __init__(self, name, current_room, item=[]):
     self.name = name 
     self.current_room = current_room
     self.item = item
   #adding method to the class
+
+  def add_item(self, item):
+    self.items.append(item)
+
   def __str__(self):
-    return f"Player {self.name} is in room {self.current_room}"
+    return f"Player {self.name} is in room {self.current_room} and has {self.item}"
+
 
   def move(self, room, user_input):
     
@@ -27,7 +32,7 @@ class Player:
       
       else:
         print("Movement isn't allowed")
-        continueGame = True
+        continueGame = False
 
 
     elif user_input == 's':

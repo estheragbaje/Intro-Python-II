@@ -1,12 +1,12 @@
 from room import Room
 from player import Player
+from item import Item
 
 
 # Declare all the rooms
 
 room = {
-    'outside':  Room("Outside Cave Entrance",
-                     "North of you, the cave mount beckons"),
+    'outside':  Room("Outside Cave Entrance", "North of you, the cave mount beckons"),
 
     'foyer':    Room("Foyer", """Dim light filters in from the south. Dusty
 passages run north and east."""),
@@ -58,6 +58,7 @@ player = Player("Player 1", room["outside"])
 while True:
   print("\nCurrent room:\n", player.current_room.name)
   print("\nCurrent description:\n", player.current_room.description )
+
   user_input = input("\nEnter direction to move player to:\n")
 
   continueGame = player.move(room, user_input)
