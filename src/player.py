@@ -15,39 +15,40 @@ class Player:
     continueGame = True
 
     if user_input == 'n':
-      if self.current_room.name == room["outside"].name:
-        self.current_room.name = room["foyer"].name
+      if self.current_room == room["outside"]:
+        self.current_room = room["foyer"]
+
       
-      elif self.current_room.name == room["foyer"].name:
-        self.current_room.name = room["overlook"].name
+      elif self.current_room == room["foyer"]:
+        self.current_room = room["overlook"]
       
       else:
         print("Movement isn't allowed")
-        continueGame = False
+        continueGame = True
 
 
     elif user_input == 's':
-      if self.current_room.name == room["foyer"].name:
-        self.current_room.name = room["outside"].name
+      if self.current_room == room["foyer"]:
+        self.current_room = room["outside"]
       
-      elif self.current_room.name == room["overlook"].name:
-        self.current_room.name = room["foyer"].name
+      elif self.current_room == room["overlook"]:
+        self.current_room = room["foyer"]
       
       else:
         print("Movement isn't allowed")
         continueGame = False
 
     elif user_input == 'e':
-      if self.current_room.name == room["foyer"].name:
-        self.current_room.name = room["narrow"].name
+      if self.current_room == room["foyer"]:
+        self.current_room = room["narrow"]
       
       else:
         print("Movement isn't allowed")
         continueGame = False
 
     elif user_input == 'w':
-      if self.current_room.name == room["narrow"].name:
-        self.current_room.name = room["foyer"].name
+      if self.current_room == room["narrow"]:
+        self.current_room = room["foyer"]
       
       else:
         print("Movement isn't allowed")

@@ -39,7 +39,7 @@ room['treasure'].s_to = room['narrow']
 # Main
 #
 #Welcome note to new player
-print("\n\nnWelcome to the Adventure Game\n")
+print("\nWelcome to the Adventure Game\n")
 print("\nInstruction:\n Use keys n, s, e and w to move player in the North, South , East & West directions")
 
 # Make a new player object that is currently in the 'outside' room.
@@ -56,9 +56,9 @@ player = Player("Player 1", room["outside"])
 #
 # If the user enters "q", quit the game.
 while True:
-  print("Current room: ", player.current_room.name )
-  print("Current description: ", player.current_room.description )
-  user_input = input("Enter direction to move player to:")
+  print("\nCurrent room:\n", player.current_room.name)
+  print("\nCurrent description:\n", player.current_room.description )
+  user_input = input("\nEnter direction to move player to:\n")
 
   continueGame = player.move(room, user_input)
 
