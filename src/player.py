@@ -5,23 +5,20 @@ from room import Room
 from item import Item
 
 class Player:
-  def __init__(self, name, current_room, item=[]):
+  def __init__(self, name, current_room, item):
     self.name = name 
     self.current_room = current_room
     self.item = item
   #adding method to the class
 
   def add_item(self, item):
-    self.items.append(item)
-
-  def __str__(self):
-    return f"Player {self.name} is in room {self.current_room} and has {self.item}"
-
+    self.extend(item)
 
   def move(self, room, user_input):
     
     continueGame = True
 
+    split = user_input.split(' ')
     if user_input == 'n':
       if self.current_room == room["outside"]:
         self.current_room = room["foyer"]
@@ -69,3 +66,6 @@ class Player:
       print("Invalid input, there's no room there. \nEnter again")
     
     return continueGame
+
+  def __str__(self):
+    return f"Player {self.name} is in room {self.current_room} and has {self.item}"

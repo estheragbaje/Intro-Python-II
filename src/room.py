@@ -5,7 +5,7 @@
 from item import Item
 
 class Room:
-  def __init__(self, name, description, item=[]):
+  def __init__(self, name, description, item):
     self.name = name 
     self.description = description
     self.n_to = None
@@ -15,7 +15,7 @@ class Room:
     self.item = item
 
 def add_item(self, item):
-  self.items.append(item)
+  self.extend(item)
 
-def __str__(self):
+def __repr__(self):
     return f"In room {self.name}. \n{self.description} \n{self.item}"
