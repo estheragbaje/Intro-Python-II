@@ -12,7 +12,10 @@ class Player:
   #adding method to the class
 
   def add_item(self, item):
-    self.extend(item)
+    self.item.append(item)
+
+  def __str__(self):
+    return f'{self.name} is in room {self.current_room.name} and has {self.item}'
 
   def move(self, room, user_input):
     
@@ -67,5 +70,4 @@ class Player:
     
     return continueGame
 
-  def __str__(self):
-    return f"Player {self.name} is in room {self.current_room} and has {self.item}"
+  

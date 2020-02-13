@@ -14,8 +14,8 @@ class Room:
     self.w_to = None
     self.item = item
 
-def add_item(self, item):
-  self.extend(item)
+  def add_item(self, item):
+    self.item.append(item)
 
-def __repr__(self):
+  def __str__(self):
     return f"In room {self.name}. \n{self.description} \n{self.item}"
